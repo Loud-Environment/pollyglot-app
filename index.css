@@ -1,0 +1,156 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button,
+input,
+textarea {
+  font-family: inherit;
+}
+
+:root {
+  --color-accent: #32cd32;
+  --color-header-text: #ffffff;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  flex: 1;
+  width: 100%;
+  background-image: url("/assets/worldmap.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+nav {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 65px 42px;
+}
+
+.logo-img {
+  width: 95px;
+  align-self: center;
+}
+
+h1 {
+  color: var(--color-accent);
+  font-family: "Big Shoulders", sans-serif;
+  font-size: 43.42px;
+}
+
+nav p {
+  color: var(--color-header-text);
+  font-weight: 500;
+  font-size: 12.21px;
+}
+
+.logo-title {
+  align-self: center;
+}
+
+main {
+  flex: 3;
+  padding: 30px 15px;
+}
+
+.main-container {
+  padding: 25px;
+  height: 100vh;
+  border: 4px solid #252f42;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+.main-container section {
+  width: 100%;
+  flex: 1;
+}
+
+.main-menu-headers {
+  text-align: center;
+  color: #035a9d;
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+
+.translation-text-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.translation-textarea {
+  resize: none;
+  flex: 1;
+  padding: 12px 10px;
+  background-color: #eff0f4;
+  color: #333333;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.5;
+  border: 0 solid black;
+  border-radius: 8px;
+}
+
+.translation-languages-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.language-options {
+  display: flex;
+  flex-direction: column;
+  justify-content: star;
+  flex: 1;
+}
+
+.language-labels {
+  display: flex;
+  padding: 10px 0px;
+  padding-left: 18px;
+}
+
+.language-labels img {
+  border: 1px solid #999999;
+  margin: auto 0;
+  margin-left: 12px;
+}
+
+.language-options span {
+  font-size: 20px;
+  font-weight: 700;
+  color: #333333;
+  margin-left: 17px;
+}
+
+.submit-text-btn {
+  width: 100%;
+  padding-block: 10px;
+  background-color: #035a9d;
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+  border-radius: 6px;
+  border: 0px solid #035a9d;
+  letter-spacing: 3%;
+  margin-bottom: 20px;
+}
