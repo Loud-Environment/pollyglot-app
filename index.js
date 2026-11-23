@@ -8,7 +8,9 @@ translationForm.addEventListener("submit", handleSubmit);
 async function handleSubmit(e) {
   e.preventDefault();
 
-  const userPrompt = translationTextArea.value.trim();
+  const formData = new FormData(translationForm);
+  const userPrompt = formData.get("sourceText");
+  const chosenLanguage = formData.get("language");
 
   if (!translationTextArea.value.trim()) {
     submitButton.textContent = "Please write some text first";
@@ -27,7 +29,7 @@ async function handleSubmit(e) {
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({ userPrompt }),
+    body: JSON.stringify({ userPrompt, chosenLanguage }),
   });
 
   const { message } = await response.json();
