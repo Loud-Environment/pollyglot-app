@@ -27,17 +27,21 @@
       </nav>
     </header>
     <main>
-      <form class="main-container">
+      <form id="translation-form" class="main-container">
         <section class="translation-text-section">
           <h3 class="main-menu-headers">Text to translate 👇</h3>
-          <textarea name="sourceText" class="translation-textarea"></textarea>
+          <textarea
+            id="user-input"
+            name="sourceText"
+            class="translation-textarea"
+          ></textarea>
         </section>
 
         <section class="translation-languages-section">
           <h3 class="main-menu-headers">Select language 👇</h3>
           <div class="language-options">
             <label class="language-labels">
-              <input type="radio" name="language" value="french" />
+              <input type="radio" name="language" value="french" checked />
               <span>French</span><img alt="" src="/assets/fr-flag.png" />
             </label>
             <label class="language-labels">
@@ -51,7 +55,9 @@
           </div>
         </section>
 
-        <button type="submit" class="submit-text-btn">Translate</button>
+        <button id="submitTextButton" type="submit" class="submit-text-btn">
+          Translate
+        </button>
       </form>
     </main>
     <script src="index.js" type="module"></script>

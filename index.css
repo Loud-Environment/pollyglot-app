@@ -51,7 +51,7 @@ nav {
 h1 {
   color: var(--color-accent);
   font-family: "Big Shoulders", sans-serif;
-  font-size: 43.42px;
+  font-size: 50px;
 }
 
 nav p {
@@ -89,7 +89,7 @@ main {
   text-align: center;
   color: #035a9d;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 25px;
   margin-bottom: 25px;
 }
 
@@ -136,7 +136,7 @@ main {
 }
 
 .language-options span {
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 700;
   color: #333333;
   margin-left: 17px;
@@ -146,7 +146,7 @@ main {
   width: 100%;
   padding-block: 10px;
   background-color: #035a9d;
-  font-size: 24px;
+  font-size: 30px;
   font-weight: 700;
   color: #ffffff;
   border-radius: 6px;
