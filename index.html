@@ -27,17 +27,20 @@
       </nav>
     </header>
     <main>
-      <form id="translation-form" class="main-container">
+      <form id="translation-form" class="translation-form">
         <section class="translation-text-section">
           <h3 class="main-menu-headers">Text to translate 👇</h3>
           <textarea
             id="user-input"
             name="sourceText"
-            class="translation-textarea"
+            class="text-field source-text"
           ></textarea>
         </section>
 
-        <section class="translation-languages-section">
+        <section
+          class="translation-languages-section"
+          id="translation-languages-section"
+        >
           <h3 class="main-menu-headers">Select language 👇</h3>
           <div class="language-options">
             <label class="language-labels">
@@ -53,6 +56,14 @@
               <span>Japanese</span><img alt="" src="/assets/jpn-flag.png" />
             </label>
           </div>
+        </section>
+
+        <section
+          class="translation-results-section hidden"
+          id="translation-results-section"
+        >
+          <h3 class="main-menu-headers">Your translation 👇</h3>
+          <p class="text-field target-text" id="translation-paragraph"></p>
         </section>
 
         <button id="submitTextButton" type="submit" class="submit-text-btn">

@@ -20,7 +20,7 @@ textarea {
 body {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
   font-family: "Poppins", sans-serif;
 }
 
@@ -65,13 +65,15 @@ nav p {
 }
 
 main {
-  flex: 3;
+  flex: 3 0 1;
   padding: 30px 15px;
+  display: flex;
+  flex-direction: column;
 }
 
-.main-container {
+.translation-form {
+  flex: 1 0 1;
   padding: 25px;
-  height: 100vh;
   border: 4px solid #252f42;
   border-radius: 15px;
   display: flex;
@@ -80,7 +82,8 @@ main {
   gap: 25px;
 }
 
-.main-container section {
+.translation-form section {
+  min-height: 0;
   width: 100%;
   flex: 1;
 }
@@ -93,22 +96,33 @@ main {
   margin-bottom: 25px;
 }
 
-.translation-text-section {
+.translation-text-section,
+.translation-results-section {
   display: flex;
   flex-direction: column;
 }
 
-.translation-textarea {
-  resize: none;
-  flex: 1;
+.text-field {
   padding: 12px 10px;
   background-color: #eff0f4;
-  color: #333333;
   font-size: 20px;
   font-weight: 600;
   line-height: 1.5;
   border: 0 solid black;
   border-radius: 8px;
+  min-height: 150px;
+}
+
+.source-text {
+  color: #333333;
+  resize: none;
+  flex: 1;
+}
+
+.target-text {
+  color: #000000;
+  flex: 1 1 0;
+  overflow-y: auto;
 }
 
 .translation-languages-section {
@@ -143,6 +157,10 @@ main {
 }
 
 .submit-text-btn {
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
   width: 100%;
   padding-block: 10px;
   background-color: #035a9d;
@@ -153,4 +171,13 @@ main {
   border: 0px solid #035a9d;
   letter-spacing: 3%;
   margin-bottom: 20px;
+  text-align: center;
+}
+
+.loading-logo {
+  width: 50px;
+}
+
+.hidden {
+  display: none;
 }
