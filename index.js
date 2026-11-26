@@ -1,4 +1,6 @@
 import { setLoading } from "./utils";
+import { marked } from "marked";
+import DOMPurify from "dompurify";
 
 // Get UI elements
 const translationForm = document.getElementById("translation-form");
@@ -22,6 +24,7 @@ async function handleSubmit(e) {
     languagesSection.classList.remove("hidden");
     translationParagraph.textContent = "";
     translationTextArea.value = "";
+    translationTextArea.disabled = true;
 
     return;
   }
@@ -61,7 +64,10 @@ async function handleSubmit(e) {
       throw new Error("Server error");
     }
 
-    translationParagraph.textContent = message;
+    const html = marked.parse(message);
+    const safeHTML = DOMPurify.sanitize(html);
+
+    translationParagraph.innerHTML = safeHTML;
   } catch (err) {
     console.log(err);
     translationParagraph.textContent =
